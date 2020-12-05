@@ -1,4 +1,14 @@
 <template>
+
+<div class="container">
+    
+
+
+<style scoped>
+   
+  <div id="news">
+        <ComponenteNoticias></ComponenteNoticias>
+  </div>
   <div id="app" class="integranteContainer mt-4 d-flex ml-2 justify-content-around" width="100%">
     <team-card class="integrante mt-3" 
       v-bind:member="{ 
@@ -29,20 +39,28 @@
         rol: 'Desarrollador BackEnd'
         }"
         ></team-card>
+   </div>
+    
+</div>
+  
+  
 
-  </div>
+
 </template>
 
-<script>
-import TeamCard from './components/TeamCard.vue'
 
+<script>
+import ComponenteNoticias from "./components/ComponenteNoticias.vue";
+import TeamCard from './components/TeamCard.vue';
 export default {
-  name: 'App',
+  name: "App",
   components: {
-  TeamCard
-  }
-}
+    ComponenteNoticias,
+    TeamCard
+  },
+};
 </script>
+
 
 <style lang="stylus" scoped>
   
