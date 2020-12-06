@@ -43,7 +43,7 @@ export default {
           descripcion:
             "Eterno interesado en la tecnología y los descubrimientos científicos. Convencido de que el cielo ya no es el lìmite",
           rol: "Desarrollador FrontEnd",
-          image: "IvanCAldana.jpg",
+          image: "./images/IvanCAldana.jpg",
         },
         {
           codigo: "2",
@@ -51,7 +51,7 @@ export default {
           descripcion:
             "Entusiasta de la programación y de aprender cosas nuevas, me encantan los videojuegos, el anime.",
           rol: "Desarrollador FullStack",
-          image: "Gallo.jpg",
+          image: "./images/Gallo.jpg",
         },
         {
           codigo: "3",
@@ -59,7 +59,7 @@ export default {
           descripcion:
             "Apasionado por la pedadogía, el cine y de como la palabra Lorem se convierte en la retahíla de letras en Latín (?) en el VSCode",
           rol: "Desarrollador BackEnd",
-          image: "JoseBohorquez.jpg",
+          image: "./images/JoseBohorquez.jpg",
         },
       ],
     };
