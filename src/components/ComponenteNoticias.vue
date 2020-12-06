@@ -47,7 +47,8 @@ export default {
   name: "ComponenteNoticias",
   data() {
     return {
-      result: "null",
+      result: Object,
+      anime: Object,
     };
   },
   mounted() {
