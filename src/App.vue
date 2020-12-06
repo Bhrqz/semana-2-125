@@ -1,68 +1,71 @@
 <template>
+  <div class="container">
+    <!--Seccion superior-->
 
-<div class="container">
-    
+    <!--Seccion de noticias-->
+    <div id="news">
+      <componente-noticias></componente-noticias>
+    </div>
 
+    <!--Seccion de equipos-->
+    <div id="team" class="card-deck">
+      <team-card
+        v-for="(member, index) of members"
+        :key="index"
+        :member="member"
+      ></team-card>
+    </div>
 
-<style scoped>
-   
-  <div id="news">
-        <ComponenteNoticias></ComponenteNoticias>
-  </div>
-  <div id="app" class="integranteContainer mt-4 d-flex ml-2 justify-content-around" width="100%">
-    <team-card class="integrante mt-3" 
-      v-bind:member="{ 
-        nombre: 'Ivan Aldana',
-        descripcion: 'Eterno interesado en la tecnología y los descubrimientos científicos. Convencido de que el cielo ya no es el lìmite',
-        codigo: '1',
-        image: 'IvanCAldana.jpg',
-        rol: 'Desarrollador FrontEnd'
-        }"
-        ></team-card>
-    
-    <team-card class="integrante mt-3" 
-      v-bind:member="{ 
-        nombre: 'Eduardo Gallo',
-        descripcion: 'Entusiasta de la programación y de aprender cosas nuevas, me encantan los videojuegos, el anime y los dibujos animados.',
-        codigo: '2',
-        image: 'Gallo.jpg',
-        rol: 'Desarrollador FullStack'
-        }"
-        ></team-card>
-    
-    <team-card class="integrante mt-3" 
-      v-bind:member="{ 
-        nombre: 'Jose Bohorquez',
-        descripcion: 'Apasionado por la pedadogía, el cine y de como la palabra Lorem se convierte en la retahíla de letras en Latín (?) en el VSCode',
-        codigo: '3',
-        image: 'JoseBohorquez.jpg',
-        rol: 'Desarrollador BackEnd'
-        }"
-        ></team-card>
-   </div>
-    
-</div>
-  
-  
-
-
+    <!--Seccion Footer-->
+    <div id="footer">
+      <footer-section></footer-section>
+    </div>
+ </div>
 </template>
-
 
 <script>
 import ComponenteNoticias from "./components/ComponenteNoticias.vue";
-import TeamCard from './components/TeamCard.vue';
+import FooterSection from "./components/FooterSection.vue";
+import TeamCard from "./components/TeamCard.vue";
 export default {
   name: "App",
   components: {
     ComponenteNoticias,
-    TeamCard
+    TeamCard,
+    FooterSection,
+  },
+  data() {
+    return {
+      members: [
+        {
+          codigo: "1",
+          nombre: "Ivan Aldana",
+          descripcion:
+            "Eterno interesado en la tecnología y los descubrimientos científicos. Convencido de que el cielo ya no es el lìmite",
+          rol: "Desarrollador FrontEnd",
+          image: "./images/IvanCAldana.jpg",
+        },
+        {
+          codigo: "2",
+          nombre: "Eduardo Gallo",
+          descripcion:
+            "Entusiasta de la programación y de aprender cosas nuevas, me encantan los videojuegos, el anime.",
+          rol: "Desarrollador FullStack",
+          image: "./images/Gallo.jpg",
+        },
+        {
+          codigo: "3",
+          nombre: "Jose Bohorquez",
+          descripcion:
+            "Apasionado por la pedadogía, el cine y de como la palabra Lorem se convierte en la retahíla de letras en Latín (?) en el VSCode",
+          rol: "Desarrollador BackEnd",
+          image: "./images/JoseBohorquez.jpg",
+        },
+      ],
+    };
   },
 };
 </script>
 
-
-<style lang="stylus" scoped>
-  
-</style>
+<style></style>
 

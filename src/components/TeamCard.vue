@@ -1,43 +1,32 @@
 <template>
-    <div class="integrante" id="contenedor">
-        <div class="col aling-items-center">
-
-            <div class="row align-items-center">
-                <img :src="require(`@/assets/${member.image}`)" width="100" height="100" alt="" class="imagenIntegrante rounded-circle" >
-                <h4 class="ml-2">{{member.nombre}}</h4> <br>
-            </div>
-                <div class=" align-items-center">
-         
-                {{member.descripcion}}
-                </div>
-                <br>
-                <div class="especialidad align-baseline">
-                    <p> {{member.rol}} </p>
-                    <p>Código: {{member.codigo}}</p>    
-                </div>
-                
-                   
-
-        </div>
-        
-    </div> 
-     
+  <div class="card">
+    <div class="card-header ">
+      <h5 class="card-title text-center">{{ member.nombre }}</h5>
+    </div>
+    <div class="pt-3 pl-5 pr-5 ">
+      <img
+        :src="member.image"
+        alt=""
+        height="200"
+        class="card-img rounded-circle border border-dark"
+      />
+    </div>
+    <div class="card-body ">
+      <p class="card-text">{{ member.descripcion }}</p>
+      <ul class="list-group list-group-flush ">
+        <li class="list-group-item bg-secondary text-white"><b>Rol:</b> {{ member.rol }}</li>
+        <li class="list-group-item bg-secondary text-white"><b>Codigo: </b> {{ member.codigo }}</li>
+      </ul>
+    </div>
+  </div>
 </template>
 
 <script>
-
-    export default {
-        name: "TeamCard",
-        props: ['member'],
-        
-        
-        
-    }
-
+export default {
+  name: "TeamCard",
+  props: ["member"],
+};
 </script>
 
 <style scoped>
-
-
-
 </style>
