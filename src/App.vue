@@ -1,26 +1,36 @@
 <template>
-  <div class="container">
-    <!--Seccion superior-->
+  <div>
+    <div class="noticias">
+      <div class="container">
+        <!--Seccion superior-->
 
-    <!--Seccion de noticias-->
-    <div id="news">
-      <componente-noticias></componente-noticias>
+        <!--Seccion de noticias-->
+        <div id="news">
+          <componente-noticias></componente-noticias>
+        </div>
+      </div>
     </div>
 
-    <!--Seccion de equipos-->
-    <div id="team" class="card-deck">
-      <team-card
-        v-for="(member, index) of members"
-        :key="index"
-        :member="member"
-      ></team-card>
+    <div class="container mt-5">
+      <!--Seccion de equipos-->
+      <div id="team" class="card-deck">
+        <team-card
+          v-for="(member, index) of members"
+          :key="index"
+          :member="member"
+        ></team-card>
+      </div>
     </div>
 
-    <!--Seccion Footer-->
-    <div id="footer">
-      <footer-section></footer-section>
+    <div class="bg-dark">
+      <div class="container ">
+        <!--Seccion Footer-->
+        <div id="footer">
+          <footer-section></footer-section>
+        </div>
+      </div>
     </div>
- </div>
+  </div>
 </template>
 
 <script>
@@ -67,5 +77,18 @@ export default {
 };
 </script>
 
-<style></style>
+<style scoped>
+.noticias {
+  background: url(https://cdn.pixabay.com/photo/2018/10/11/19/04/sketch-3740576_1280.jpg)
+    no-repeat fixed center;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  height: 100%;
+  width: 100%;
+  text-align: center;
+}
+
+</style>
 
